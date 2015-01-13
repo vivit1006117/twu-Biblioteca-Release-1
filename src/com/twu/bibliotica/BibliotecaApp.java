@@ -13,7 +13,7 @@ public class BibliotecaApp {
 
     public String listOfBooks(Library book) {
         if (book.getValue() != null) {
-            return book.getValue();
+            return welcomeMessage();
         } else {
             return emptyList();
         }

@@ -15,13 +15,14 @@ public class Launcher {
         MainMenu menu = new MainMenu();
         BibliotecaApp showOption=new BibliotecaApp();
 
-        System.out.println(showOption.welcomeMessage());
-        String option="";
-        while (!option.equals("Quit")) {
+        System.out.println(showOption.listOfBooks(library));
+        int option=0;
+        while (option!=4) {
             showOption.options();
             System.out.println("Enter option to be selected");
             Scanner in = new Scanner(System.in);
-            option= in.nextLine();
+            String options=in.nextLine();
+            option= Integer.parseInt(options);
             menuItem = menu.get(option);
             menuItem.execute(library);
         }

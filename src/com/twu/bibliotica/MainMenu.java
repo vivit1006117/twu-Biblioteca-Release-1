@@ -5,17 +5,17 @@ package com.twu.bibliotica;
  */
 public class MainMenu {
 
-    public MainMenu get(String option) {
-        if (option.equals("BookList")){
+    public MainMenu get(int option) {
+        if (option==1){
             return new BookList();
         }
-        else if(option.equals("Checkout")){
+        else if(option==2){
             return new Checkout();
         }
-        else if(option.equals("SubmitBook")){
+        else if(option==3){
             return new SubmitBook();
         }
-        else if(option.equals("Quit")){
+        else if(option==4){
             return new Quit();
         }
         else{
